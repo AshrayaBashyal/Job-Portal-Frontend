@@ -6,9 +6,10 @@ export default function Register() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
+    username: "",
     email: "",
     password: "",
-    role: "candidate", // or employer
+    role: "CANDIDATE", // or EMPLOYER
   });
 
   const [error, setError] = useState("");
@@ -38,6 +39,15 @@ export default function Register() {
         <h2 className="text-2xl font-bold text-center">Register</h2>
 
         <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          className="w-full border p-2 rounded"
+          onChange={handleChange}
+          required
+        />
+
+        <input
           type="email"
           name="email"
           placeholder="Email"
@@ -60,8 +70,8 @@ export default function Register() {
           className="w-full border p-2 rounded"
           onChange={handleChange}
         >
-          <option value="candidate">Candidate</option>
-          <option value="employer">Employer</option>
+          <option value="CANDIDATE">Candidate</option>
+          <option value="EMPLOYER">Employer</option>
         </select>
 
         {error && <p className="text-red-500 text-sm">{error}</p>}
