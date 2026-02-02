@@ -11,7 +11,7 @@ export default function App() {
       <Route path="/list" element={<JobList />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/my-jobs" element={<PrivateRoute> <MyJobs /> </PrivateRoute>} />
+      {/* <Route path="/my-jobs" element={<PrivateRoute> <MyJobs /> </PrivateRoute>} /> */}
     </Routes>
   );
 }
