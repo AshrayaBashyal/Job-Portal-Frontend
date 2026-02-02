@@ -17,7 +17,7 @@ export default function Navbar() {
           </>
         )}
 
-        {user?.role === "employer" && (
+        {user?.role === "EMPLOYER" && (
           <>
             <Link to="/create-job">Post Job</Link>
             <Link to="/my-jobs">My Jobs</Link>
@@ -25,7 +25,7 @@ export default function Navbar() {
           </>
         )}
 
-        {user?.role === "candidate" && (
+        {user?.role === "CANDIDATE" && (
           <>
             <Link to="/my-applications">My Applications</Link>
           </>

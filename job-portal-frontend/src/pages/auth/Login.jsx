@@ -24,7 +24,7 @@ export default function Login() {
 
     try {
       const res = await API.post("accounts/login/", form);
-      login(res.data); // save tokens
+      login(res.data.user, res.data); 
       navigate("/");
     } catch (err) {
       setError("Invalid credentials");

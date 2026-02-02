@@ -4,6 +4,7 @@ import Register from "./pages/auth/Register";
 import JobList from "./pages/jobs/JobList";
 import PrivateRoute from "./routes/PrivateRoute";
 import Navbar from "./components/Navbar";
+import { AuthProvider } from "./auth/AuthContext";
 
 
 

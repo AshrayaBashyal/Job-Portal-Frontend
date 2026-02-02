@@ -6,10 +6,11 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const login = (tokens) => {
+  const login = (userData, tokens) => {
     localStorage.setItem("access", tokens.access);
     localStorage.setItem("refresh", tokens.refresh);
-    setUser(jwtDecode(tokens.access));
+    localStorage.setItem("user", JSON.stringify(userData)); // Store user object
+    setUser(userData);
   };
 
   const logout = () => {
@@ -18,8 +19,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const token = localStorage.getItem("access");
-    if (token) setUser(jwtDecode(token));
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) setUser(JSON.parse(savedUser));
   }, []);
 
   return (
