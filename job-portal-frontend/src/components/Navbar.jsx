@@ -28,6 +28,7 @@ export default function Navbar() {
 
         {user?.role === "CANDIDATE" && (
           <>
+            <Link to="/jobs">Browse Jobs</Link>
             <Link to="/my-applications">My Applications</Link>
           </>
         )}
