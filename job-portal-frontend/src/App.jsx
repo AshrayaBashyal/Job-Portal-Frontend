@@ -17,7 +17,7 @@ export default function App() {
     <>
     <Navbar />
     <Routes>
-      <Route path="/list" element={<JobList />} />
+      <Route path="/" element={<JobList />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       {/* <Route path="/my-jobs" element={<PrivateRoute> <MyJobs /> </PrivateRoute>} /> */}
