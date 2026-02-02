@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link to="/create-job">Post Job</Link>
             <Link to="/my-jobs">My Jobs</Link>
             <Link to="/employer-applications">Applications</Link>
-            <Link to="/create-company"> Create Companies</Link>
+            <Link to="/create-company"> Create Company</Link>
           </>
         )}
 
